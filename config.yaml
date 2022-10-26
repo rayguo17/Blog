@@ -1,0 +1,49 @@
+baseurl: "http://192.168.1.15/"
+title: My blog
+theme: hugo-PaperMod-master
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+languages:
+  en:
+    languageName: "English"
+    #weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives/
+          weight: 5
+        - name: Tags
+          url: tags/
+          weight: 10
+  
+
+params: 
+  description: "This is a personal website!"
+  ShowShareButtons: true
+  ShowReadingTime: true
+  defaultTheme: auto
+  ShowCodeCopyButtons: true
+  homeInfoParams:
+    Title: Hi there 
+    Content: >
+            Welcome to demo of hugo's theme PaperMod.
+            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+            - Do give a 🌟 on Github !
+            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+  
+  SocialIcons:
+    - name: "twitter"
+      url: "https://twitter.com/rayguo17"
+    - name: "github"
+      url: "https://github.com/rayguo17"
