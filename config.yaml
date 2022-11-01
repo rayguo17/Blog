@@ -1,5 +1,5 @@
 baseurl: "http://192.168.1.15/"
-title: My blog
+title: Rayguo17's Blog
 theme: hugo-PaperMod-master
 
 enableInlineShortcodes: true
@@ -9,10 +9,11 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-
+hasCJKLanguage: true 
+languageCode: "zh-cn"
 languages:
   en:
-    languageName: "English"
+    languageName: "Chinese"
     #weight: 1
     taxonomies:
       category: categories
@@ -26,24 +27,72 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
+        - name: Search
+          url: search/
   
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 params: 
-  description: "This is a personal website!"
+  description: "This is rayguo17's personal blog! Being part of the service hosts on raspberry pi. Here i will share my study notes, daily notes. Content will mainly be in Chinese, but i am improving my english, so hopes to have more english contents soon! Enjoy!"
+  author: Rayguo17
+  DateFormat: "January 2, 2006"
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+
+  disableScrollToTop: false
   ShowShareButtons: true
   ShowReadingTime: true
+  ShowWordCount: true
   defaultTheme: auto
   ShowCodeCopyButtons: true
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+  assets:
+    favicon: "img/favicon.ico"
+    favicon16x16: "img/favicon-16x16.png"
+    favicon32x32: "img/favicon-32x32.png"
+    apple_touch_icon: "img/apple-touch-icon.png"
+
+  label:
+    text: "Home"
+    icon: "img/apple-touch-icon.png"
+    iconHeight: 35
+
   homeInfoParams:
-    Title: Hi there 
+    Title: မင်္ဂလာပါ 🙏
     Content: >
-            Welcome to demo of hugo's theme PaperMod.
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-            - Do give a 🌟 on Github !
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            我是Rayguo17，缅甸🇲🇲生人，从小在中国🇨🇳长大。目前是SJTU_IS的大四学生，喜欢折腾一些奇奇怪怪的东西，时不时会写成博客记录下来。目标是为自己而活，因为自己的意愿而去做一些事情。目前想到的就是做志愿者，做自己想做的研究，认识多点人，接收不同的价值观。潜意识里经常抗拒改变，但是，Life is too short to worry About. 行动吧，骚年！
+            
   
   SocialIcons:
     - name: "twitter"
       url: "https://twitter.com/rayguo17"
     - name: "github"
       url: "https://github.com/rayguo17"
+
+  profileMode:
+    enabled: false
+
+  cover:
+    hidden: true 
+  
+  editPost:
+    URL: "https://github.com/rayguo17/Blog/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+  
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
